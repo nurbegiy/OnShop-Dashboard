@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnShop Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <i class="bx bxs-shopping-bag logo-icon"></i>
+      <span class="logo-text">OnShop</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#" class="nav-item active">
+        <i class="bx bxs-home nav-icon"></i>
+        <span class="nav-label">Home</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="bx bxs-category nav-icon"></i>
+        <span class="nav-label">Categories</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="bx bxs-wallet nav-icon"></i>
+        <span class="nav-label">Wallet</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="bx bxs-cart nav-icon"></i>
+        <span class="nav-label">Cart</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="bx bxs-user nav-icon"></i>
+        <span class="nav-label">User Profile</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="bx bxs-cog nav-icon"></i>
+        <span class="nav-label">Settings</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="nav-item logout">
+        <i class="bx bx-log-out nav-icon"></i>
+        <span class="nav-label">Log Out</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="search-wrapper">
+        <input type="text" class="search-input" placeholder="Search Product" />
+        <i class="bx bx-search search-icon"></i>
+      </div>
+      <div class="header-actions">
+        <button class="action-btn">
+          <i class="bx bx-globe"></i>
+        </button>
+        <button class="action-btn">
+          <i class="bx bxs-message-rounded-dots"></i>
+        </button>
+        <button class="action-btn notif">
+          <i class="bx bxs-bell"></i>
+          <span class="badge"></span>
+        </button>
+        <div class="profile-chip">
+          <img
+            src="men.jpg"
+            alt="Sarif Hossain"
+            class="avatar"
+          />
+          <span class="profile-name">Nurbek Buriyev</span>
+          <i class="bx bx-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- PAGE BODY -->
+    <div class="page-body">
+
+      <!-- CATEGORIES -->
+      <section class="section">
+        <h2 class="section-title">Categories</h2>
+        <div class="category-grid">
+
+          <div class="cat-card cat-all">
+            <div class="cat-blob cat-blob-1"></div>
+            <div class="cat-blob cat-blob-2"></div>
+            <span class="cat-name">All Product</span>
+            <div class="cat-icon-wrap">
+              <img src="https://img.icons8.com/color/96/target.png" alt="All" class="cat-img"/>
+            </div>
+          </div>
+
+          <div class="cat-card cat-lifestyle">
+            <div class="cat-blob cat-blob-1"></div>
+            <div class="cat-blob cat-blob-2"></div>
+            <span class="cat-name">Lifestyle</span>
+            <div class="cat-icon-wrap">
+              <img src="https://img.icons8.com/color/96/dumbbell.png" alt="Lifestyle" class="cat-img"/>
+            </div>
+          </div>
+
+          <div class="cat-card cat-fashion">
+            <div class="cat-blob cat-blob-1"></div>
+            <div class="cat-blob cat-blob-2"></div>
+            <span class="cat-name">Fashion</span>
+            <div class="cat-icon-wrap">
+              <img src="https://cdn-icons-png.flaticon.com/512/2589/2589896.png" alt="Fashion" class="cat-img"/>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ALL PRODUCT -->
+      <section class="section">
+        <h2 class="section-title">All Product</h2>
+        <div class="product-grid">
+
+          <!-- Card 1 -->
+          <div class="product-card">
+            <div class="card-top">
+              <button class="cart-btn-sm"><i class="bx bx-cart"></i></button>
+              <div class="product-img-wrap">
+                <img src="https://img.icons8.com/color/120/backpack.png" alt="Stylish Backpack" class="product-img"/>
+              </div>
+              <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <div class="card-info">
+              <p class="product-name">Stylish Backpack</p>
+              <div class="card-meta">
+                <div class="stars">
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <span class="price">$20.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="product-card">
+            <div class="card-top">
+              <button class="cart-btn-sm"><i class="bx bx-cart"></i></button>
+              <div class="product-img-wrap">
+                <img src="https://cdn-icons-png.flaticon.com/512/892/892458.png" alt="Shirt" class="product-img"/>
+              </div>
+              <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <div class="card-info">
+              <p class="product-name">Shirt</p>
+              <div class="card-meta">
+                <div class="stars">
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <span class="price">$19.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="product-card">
+            <div class="card-top">
+              <button class="cart-btn-sm"><i class="bx bx-cart"></i></button>
+              <div class="product-img-wrap">
+                <img src="https://img.icons8.com/color/120/shorts.png" alt="Stylish Shorts" class="product-img"/>
+              </div>
+              <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <div class="card-info">
+              <p class="product-name">Stylish Shorts</p>
+              <div class="card-meta">
+                <div class="stars">
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <span class="price">$9.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 (SALE) -->
+          <div class="product-card">
+            <div class="sale-badge">SALE</div>
+            <div class="card-top">
+              <button class="cart-btn-sm"><i class="bx bx-cart"></i></button>
+              <div class="product-img-wrap">
+                <img src="https://img.icons8.com/color/120/t-shirt.png" alt="T-Shirt" class="product-img"/>
+              </div>
+              <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <div class="card-info">
+              <p class="product-name">T-Shirt</p>
+              <div class="card-meta">
+                <div class="stars">
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <div class="price-group">
+                  <span class="price">$20.00</span>
+                  <span class="price-old">$40.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="product-card">
+            <div class="card-top">
+              <button class="cart-btn-sm"><i class="bx bx-cart"></i></button>
+              <div class="product-img-wrap">
+                <img src="https://cdn-icons-png.flaticon.com/512/3082/3082037.png" alt="Bag" class="product-img"/>
+              </div>
+              <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <div class="card-info">
+              <p class="product-name">Bag</p>
+              <div class="card-meta">
+                <div class="stars">
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <span class="price">$25.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="product-card">
+            <div class="card-top">
+              <button class="cart-btn-sm"><i class="bx bx-cart"></i></button>
+              <div class="product-img-wrap">
+                <img src="https://cdn-icons-png.flaticon.com/512/2589/2589874.png" alt="Stylish Red-Dress" class="product-img"/>
+              </div>
+              <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <div class="card-info">
+              <p class="product-name">Stylish Red-Dress</p>
+              <div class="card-meta">
+                <div class="stars">
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <span class="price">$60.00</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PAGINATION -->
+      <div class="pagination">
+        <button class="page-btn arrow"><i class="bx bx-chevron-left"></i></button>
+        <button class="page-btn">1</button>
+        <button class="page-btn active">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn arrow"><i class="bx bx-chevron-right"></i></button>
+      </div>
+
+    </div><!-- end .page-body -->
+  </main>
+
+</body>
+</html>
