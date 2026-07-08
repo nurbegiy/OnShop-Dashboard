@@ -167,9 +167,6 @@ body {
   background: #F0EDF9;
 }
 
-/* Shift main when sidebar expands on hover — CSS-only trick via sibling not possible,
-   so we add a generous left margin that keeps content comfortable even collapsed */
-
 /* ============================================================
    HEADER
    ============================================================ */
@@ -232,7 +229,8 @@ body {
 }
 
 .action-btn {
-  width: 40px; height: 40px;
+  width: 40px;
+  height: 40px;
   border: none;
   border-radius: 50%;
   background: var(--light-purple);
@@ -484,7 +482,7 @@ body {
 .buy-now-btn {
   position: absolute;
   left: 50%;
-  bottom: -52px;              /* hidden below the card-top */
+  bottom: -52px;
   transform: translateX(-50%);
   z-index: 10;
   padding: 11px 32px;
@@ -501,7 +499,7 @@ body {
 }
 
 .product-card:hover .buy-now-btn {
-  bottom: calc(50% - 22px);   /* vertically centred inside card-top */
+  bottom: calc(50% - 22px);
   opacity: 1;
 }
 
@@ -523,15 +521,6 @@ body {
   justify-content: space-between;
   gap: 8px;
 }
-
-.stars {
-  display: flex;
-  gap: 2px;
-  font-size: 14px;
-  color: var(--star);
-}
-
-.stars .bx-star { color: #ddd; }
 
 .price {
   font-size: 15px;
@@ -598,9 +587,7 @@ body {
   color: var(--secondary);
 }
 
-/* ============================================================
-   SCROLLBAR
-   ============================================================ */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
@@ -608,24 +595,88 @@ body {
   border-radius: 10px;
 }
 
-/* ============================================================
-   RESPONSIVE TWEAKS (≤900px)
-   ============================================================ */
+/* Responsive Tweaks */
 @media (max-width: 900px) {
-  .category-grid,
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .category-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-  .category-grid,
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
+  .category-grid, .product-grid { grid-template-columns: 1fr; }
   .page-body { padding: 20px 16px; }
   .header { padding: 16px; gap: 10px; }
   .profile-name { display: none; }
-  .search-input:hover,
-  .search-input:focus { width: 220px; }
+  .search-input:hover, .search-input:focus { width: 220px; }
+}
+
+/* ============================================================
+   YANGI COUNTER STYLES (Buy Now almashishi uchun)
+   ============================================================ */
+.quantity-controls {
+  position: absolute;
+  left: 50%;
+  bottom: -52px;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  padding: 6px 14px;
+  border-radius: 30px;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transition: bottom 0.4s ease, opacity 0.4s ease;
+}
+
+.product-card.active-counter:hover .quantity-controls {
+  bottom: calc(50% - 22px);
+  opacity: 1;
+}
+
+.product-card.active-counter .buy-now-btn {
+  display: none !important;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: var(--light-purple);
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.qty-btn:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.raqam {
+  font-size: 15px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+  color: var(--text);
+}
+
+.yoq-btn {
+  border: none;
+  background: transparent;
+  color: #ff4d6d;
+  font-size: 18px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  margin-left: 4px;
+  transition: transform 0.2s;
+}
+
+.yoq-btn:hover {
+  transform: scale(1.15);
 }
